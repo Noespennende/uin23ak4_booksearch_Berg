@@ -1,7 +1,7 @@
 export default function Layout({children}){
     return(
         <>
-        <p>Layout!</p>
+        <h1>Bookify</h1>
         <nav>
             <form>
                 <label htmlFor="search">Search for a book</label>

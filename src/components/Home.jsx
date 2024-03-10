@@ -1,3 +1,5 @@
+import Bookcard from "./Bookcard"
+
 export default function Home({content}){
 
     console.log(content)
@@ -6,15 +8,9 @@ export default function Home({content}){
         <>
             <section>
                 {content?.map((book, index) =>
-                <article key={"book"+ index}>
-                    <h3>{book.title}</h3>
-                    <h4>Author:</h4>
-                    {book?.author_name?.map((author, idx) =>
-                    <li key={"author" + idx}>{author}</li>)}
-                    <p>First published: {book.first_publish_year}</p>
-                </article>)}
+                <Bookcard key={"book"+ index} title={book.title} author={book.author_name} year={book.first_publish_year} rating={book.ratings_average} amazoneId={book.id_amazon}/>
+                )}
             </section>
-            <p>Home!</p>
         </>
     )
 }

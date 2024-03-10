@@ -27,11 +27,9 @@ function App() {
 
   return (
     <Layout>
-      <BrowserRouter>
         <Routes>
           <Route index element={<Home content={content}/>}/>
         </Routes>
-      </BrowserRouter>
     </Layout>
   )
 }
