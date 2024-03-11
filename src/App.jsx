@@ -1,8 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
 import Layout from './components/Layout'
-import Home from './components/Home'
+import Searchresults from './components/Searchresults'
 import { useEffect, useState } from 'react'
+import BookPage from './components/BookPage'
+
 
 
 function App() {
@@ -20,15 +22,17 @@ function App() {
     }
   }
 
-
   useEffect(() => {
     getData()
-  }, [])
+  }, [query])
 
   return (
-    <Layout>
+    <Layout setQuery={setQuery}>
         <Routes>
-          <Route index element={<Home content={content}/>}/>
+          <Route index element={<Searchresults content={content}/>}/>
+        </Routes>
+        <Routes>
+          <Route path='/book/:id' element={<BookPage content={content}/>}/>
         </Routes>
     </Layout>
   )
