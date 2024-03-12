@@ -5,7 +5,7 @@ export default function Bookcard ({title, year, author, rating, amazoneId, image
 
     return  (
         <article>
-            {image? (<img src={`https://covers.openlibrary.org/b/olid/${image}-M.jpg`} title={`Coverbilde for ${title}`}/>) : (<img src={"https://i.imgur.com/0ZzYCzH.png"} title={`No coverimage found for this book`}/>)}
+            {image? (<img src={`https://covers.openlibrary.org/b/olid/${image}-M.jpg`} alt={`Coverbilde for ${title}`}/>) : (<img src={"https://i.imgur.com/0ZzYCzH.png"} alt={`No coverimage found for this book`}/>)}
             <h3>{title}</h3>
             <h4>Author:</h4>
             <ul>

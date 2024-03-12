@@ -10,8 +10,8 @@ export default function BookPage(content){
     return (
         <>
         <nav><Link to={"/"}>Home</Link></nav>
-            {book.cover_edition_key? (<img src={`https://covers.openlibrary.org/b/olid/${book?.cover_edition_key}-L.jpg`}  title={`Coverbilde for ${book?.title}`}/>) :
-            (<img src={"https://i.imgur.com/0ZzYCzH.png"} title={`No coverimage found for this book`}/>)}
+            {book.cover_edition_key? (<img src={`https://covers.openlibrary.org/b/olid/${book?.cover_edition_key}-L.jpg`}  alt={`Coverbilde for ${book?.title}`}/>) :
+            (<img src={"https://i.imgur.com/0ZzYCzH.png"} alt={`No coverimage found for this book`}/>)}
             <h2>{book.title}</h2>
             <h3>Author(s):</h3>
             <ul>
