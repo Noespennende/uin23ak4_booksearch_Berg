@@ -1,0 +1,40 @@
+@import 'search';
+
+$white: #ffffff;
+$darkgray: #1d1d1d;
+$mediumgray: #303030;
+$lightgray: #a8a8a8;
+$black: #000000;
+$mediumborange: #ff790b;
+$lightorange: #ff9a48;
+$red: rgb(255, 40, 40);
+$rootsize: 20px;
+
+body {
+    background-color: $darkgray;
+    width: 100%;
+
+    #root{
+        width: 100%;
+        font-size: $rootsize;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+         header{
+            width: 100%;
+
+            .logo {
+                color: $mediumborange;
+                font-size: 5rem;
+                font-weight: 700;
+             }
+
+             nav{
+                margin-top: 1.5rem;
+            }
+        }
+         
+     }
+}
+

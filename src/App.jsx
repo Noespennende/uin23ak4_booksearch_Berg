@@ -17,10 +17,12 @@ function App() {
       const response = await fetch(`https://openlibrary.org/search.json?title=${query}&limit=20`)
       const data = await response.json()
       setContent(data.docs)
+      localStorage.setItem("queryData", JSON.stringify(data.docs))
     } catch{
       console.error("Error i getData funksjon")
     }
   }
+
 
   useEffect(() => {
     getData()
@@ -29,10 +31,10 @@ function App() {
   return (
     <Layout setQuery={setQuery}>
         <Routes>
-          <Route index element={<Searchresults content={content}/>}/>
+          <Route index element={<Searchresults content={content} query={query}/>}/>
         </Routes>
         <Routes>
-          <Route path='/book/:id' element={<BookPage content={content}/>}/>
+          <Route path='/book/:id' element={<BookPage />}/>
         </Routes>
     </Layout>
   )

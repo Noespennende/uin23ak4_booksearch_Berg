@@ -23,12 +23,14 @@ export default function Searchbar ({setQuery}){
 
     return(
         <>
-        <p>{errorMessage}</p>
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="search">Search for a book</label>
-            <input type="text" id="search" placeholder="James bond..." onChange={handleChange}></input>
-            <input type="submit" value="Search"></input>
-        </form>
+        <div className="search">
+            <form onSubmit={handleSubmit} className="searchbar">
+                <label htmlFor="search">Search for a book</label>
+                <input type="text" id="search" placeholder="James bond..." onChange={handleChange} className="textField"></input>
+                <input type="submit" value="Search" className="submit"></input>
+            </form>
+            <span className="errorMessage">{errorMessage}</span>
+        </div>
         </>
     )
 }
