@@ -1,4 +1,6 @@
 @import 'search';
+@import 'bookcard';
+@import 'bookpage';
 
 $white: #ffffff;
 $darkgray: #1d1d1d;
@@ -17,13 +19,10 @@ body {
     #root{
         width: 100%;
         font-size: $rootsize;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
 
          header{
             width: 100%;
-
+            
             .logo {
                 color: $mediumborange;
                 font-size: 5rem;
@@ -32,6 +31,21 @@ body {
 
              nav{
                 margin-top: 1.5rem;
+            }
+        }
+
+        main {
+            h1 {
+                font-size: 2rem;
+                margin-top: 2rem;
+            }
+            .searchResultsContent{
+                max-width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
             }
         }
          
